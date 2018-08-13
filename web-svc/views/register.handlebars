@@ -1,0 +1,21 @@
+<h1>REGISTER</h1>
+
+{{#if error}}
+    <h2>ERROR: {{ errorMsg }}</h2>
+{{/if}}
+
+<form action="register" method="POST">
+    <label for="username">username:</label>
+    <input types="text" name="username">
+    <br><br>
+    <label for="password"> password: </label>
+    <input type="password" name="password">
+     <br><br>
+    <label for="admin"> admin: </label>
+    <select name= "admin">
+        <option value="s">Si</option>
+        <option value="n">No</option>
+    </select> 
+    <br><br>
+    <input type="submit" value="register">
+</form>

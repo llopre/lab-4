@@ -1,0 +1,26 @@
+<h1>HOME</h1>
+{{#if identified}}
+    <h2>  identificado como: {{username}} id: {{userid}} admin: {{admin}}</h2>
+{{ else}}
+    <h2> anonimo </h2>
+{{/if}}
+{{#if logouterror}}
+    <h2> {{errorMsg}} </h2>
+{{/if}}
+
+    <li>{{ this }}</li>
+{{/each}}
+
+<br>
+
+{{#each items as |val key|}}
+    <li>key:{{ key }}, val:{{ val }}</li>
+{{/each}}
+--}}
+
+<form action="logout" method="POST">
+    <input type="hidden" name="username" value="{{username}}">
+    <input type="hidden" name="password" value="{{password}}">
+    <input type="hidden" name="admin" value="{{admin}}">
+    <input type="submit" value="logout">
+</form>
